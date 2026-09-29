@@ -12,7 +12,7 @@ export default function KnowledgePage() {
 
   const collections = [
     {
-      name: "soar_knowledge",
+      name: "saw_knowledge",
       description: "Default primary organizational knowledge base and standard operating procedures.",
       backend: "ChromaDB (Local)",
       embeddingModel: "BAAI/bge-m3 (1024-dim)",
@@ -73,7 +73,7 @@ export default function KnowledgePage() {
         </div>
         <div className="flex items-center justify-between text-[11px] text-[#657066]">
           <span>Vector Similarity: Cosine metric</span>
-          <span className="text-[#D5FF78]">Active collection: soar_knowledge</span>
+          <span className="text-[#D5FF78]">Active collection: saw_knowledge</span>
         </div>
       </div>
 

@@ -83,7 +83,7 @@ export function TopBar() {
         )}
 
         <div className="flex items-center gap-2 text-xs font-mono">
-          <span className="text-[#657066]">soar</span>
+          <span className="text-[#657066]">saw</span>
           <span className="text-[#657066]">/</span>
           <span className="font-semibold text-[#F1F5ED]">{getSectionTitle()}</span>
         </div>

@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 class SearchKnowledgeTool(BaseTool):
     """
-    Tool for searching the local SOAR organizational knowledge base.
+    Tool for searching the local SAW organizational knowledge base.
     Uses semantic similarity search over local persistent ChromaDB vectors.
     Supports dependency injection for embedding models and vector stores.
     100% air-gapped and local.
@@ -20,7 +20,7 @@ class SearchKnowledgeTool(BaseTool):
         self,
         embedding_model: Optional[BaseEmbeddingModel] = None,
         vector_store: Optional[BaseVectorStore] = None,
-        collection_name: str = "soar_knowledge",
+        collection_name: str = "saw_knowledge",
         persist_directory: str = "data/chroma",
         default_top_k: int = 5,
     ):
@@ -37,7 +37,7 @@ class SearchKnowledgeTool(BaseTool):
     @property
     def description(self) -> str:
         return (
-            "Search the local SOAR organizational knowledge base for relevant information "
+            "Search the local SAW organizational knowledge base for relevant information "
             "using semantic similarity retrieval."
         )
 

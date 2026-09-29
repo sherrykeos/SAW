@@ -1,5 +1,5 @@
 """
-SOAR Main Application Entry Point.
+SAW Main Application Entry Point.
 Initializes the FastAPI application from app.api.create_app().
 """
 

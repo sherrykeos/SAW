@@ -88,7 +88,7 @@ class Planner:
         context_block = f"\n{context_desc}\n" if context_desc else ""
         history_block = f"\n{obs_desc}\n" if obs_desc else ""
 
-        prompt = f"""You are the planning component of SOAR, a sovereign on-premise AI agent.
+        prompt = f"""You are the planning component of SAW, a sovereign agentic AI agent.
 
 TASK:
 {state.task}

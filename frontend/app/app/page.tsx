@@ -29,7 +29,7 @@ export default function WorkbenchHomePage() {
             <div className="flex items-center gap-2 truncate">
               <AlertCircle className="w-4 h-4 shrink-0" />
               <span className="truncate">
-                SOAR backend offline. Confirm server is running at <code>http://127.0.0.1:8000</code>.
+                SAW backend offline. Confirm server is running at <code>http://127.0.0.1:8000</code>.
               </span>
             </div>
             <button

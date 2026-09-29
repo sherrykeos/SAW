@@ -368,7 +368,7 @@ export default function FileManagerPage() {
           isOpen={!!fileToDelete}
           onClose={() => setFileToDelete(null)}
           title="Delete Local File?"
-          description="This action removes the file from SOAR local storage immediately."
+          description="This action removes the file from SAW local storage immediately."
           maxWidth="sm"
         >
           <div className="space-y-4 font-mono text-xs">

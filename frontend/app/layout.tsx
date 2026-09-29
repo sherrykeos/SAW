@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SOAR — Sovereign AI Workbench",
+  title: "SAW — Sovereign Agentic AI Workbench",
   description:
-    "A sovereign on-premise AI workbench for research, analysis, creation, building and execution on your machine.",
+    "A sovereign agentic AI workbench for research, analysis, creation, building and execution on your machine.",
   openGraph: {
-    title: "SOAR — Sovereign AI Workbench",
+    title: "SAW — Sovereign Agentic AI Workbench",
     description:
-      "A sovereign on-premise AI workbench for research, analysis, creation, building and execution on your machine.",
+      "A sovereign agentic AI workbench for research, analysis, creation, building and execution on your machine.",
     type: "website",
   },
 };

@@ -1,18 +1,18 @@
-# SOAR Centralized Application Configuration
+# SAW Centralized Application Configuration
 
-SOAR (Sovereign On-premise Agentic Reasoning) uses a centralized, typed, and dynamic configuration system.
+SAW (Sovereign Agentic AI Workbench) uses a centralized, typed, and dynamic configuration system.
 
 A single configuration file controls the entire application:
 
 ```text
-SOAR/
+SAW/
 ├── config/
 │   └── config.yaml
 ├── app/
 │   └── ...
 ```
 
-A user can move SOAR to another machine, edit `config/config.yaml`, and run the system without modifying Python source code.
+A user can move SAW to another machine, edit `config/config.yaml`, and run the system without modifying Python source code.
 
 ---
 
@@ -25,7 +25,7 @@ A user can move SOAR to another machine, edit `config/config.yaml`, and run the 
            (YAML parsing + Validation + Path resolution)
                           ↓
                 app/config/schema.py
-             (Typed SOARConfig Dataclasses)
+              (Typed SAWConfig Dataclasses)
                           ↓
        ┌──────────────────┼──────────────────┐
        ↓                  ↓                  ↓
@@ -46,7 +46,7 @@ A user can move SOAR to another machine, edit `config/config.yaml`, and run the 
 Basic application metadata and debugging flags.
 ```yaml
 app:
-  name: "SOAR"
+  name: "SAW"
   environment: "development"
   debug: false
 ```
@@ -54,7 +54,7 @@ app:
 ---
 
 ### `models` (Dynamic Model Pool)
-SOAR's model registry is populated directly from configuration. Any model supported by an existing provider (e.g. `ollama`, `mock`) can be added or replaced through `config.yaml` without changing Python source code.
+SAW's model registry is populated directly from configuration. Any model supported by an existing provider (e.g. `ollama`, `mock`) can be added or replaced through `config.yaml` without changing Python source code.
 
 ```yaml
 models:
@@ -104,7 +104,7 @@ To add a new local model (e.g., `deepseek-coder:6.7b` for coding):
      priority: 5
      enabled: true
    ```
-3. Restart SOAR. The `ModelRouter` will dynamically prioritize and select `deepseek-coder:6.7b` for coding tasks.
+3. Restart SAW. The `ModelRouter` will dynamically prioritize and select `deepseek-coder:6.7b` for coding tasks.
 
 *Note: Adding a model supported by an existing provider (such as Ollama) requires configuration only. Adding an entirely new inference provider backend requires implementing a corresponding `ModelAdapter`.*
 
@@ -129,7 +129,7 @@ storage:
   allow_empty: true
 
 database:
-  path: "./data/soar.db"
+  path: "./data/saw.db"
 ```
 
 ---
@@ -140,7 +140,7 @@ Local ChromaDB and BGE-M3 embedding settings.
 vector_store:
   backend: "chroma"
   path: "./data/chroma"
-  collection_name: "soar_knowledge"
+  collection_name: "saw_knowledge"
 
 embeddings:
   model_name_or_path: "BAAI/bge-m3"
@@ -179,11 +179,13 @@ security:
 
 ## 3. Hardware Portability & Deployment
 
-All relative paths (e.g. `./data/files`, `./data/soar.db`, `./data/chroma`) resolve automatically relative to the SOAR project root directory.
+All relative paths (e.g. `./data/files`, `./data/saw.db`, `./data/chroma`) resolve automatically relative to the SAW project root directory.
 
-To move SOAR to another machine:
-1. Copy the SOAR project directory to the new machine.
+To move SAW to another machine:
+1. Copy the SAW project directory to the new machine.
 2. Edit `config/config.yaml` to specify the local model pool and desired storage paths for the machine.
-3. Start SOAR. No source code edits are necessary.
+3. Start SAW. No source code edits are necessary.
+
+Changes to `config.yaml` take effect when the SAW application starts or is restarted.R. No source code edits are necessary.
 
 Changes to `config.yaml` take effect when the SOAR application starts or is restarted.

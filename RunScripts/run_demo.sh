@@ -1,6 +1,6 @@
 #!/bin/bash
 # =====================================================================
-#   SOAR - Sovereign On-premise Agentic Reasoning (Demo Mode)
+#   SAW - Sovereign Agentic AI Workbench (Demo Mode)
 #   Starting with Zero GPU, Zero Model Downloads, Zero Ollama
 # =====================================================================
 
@@ -12,7 +12,7 @@ if [ ! -d "backend" ] && [ -d "../backend" ]; then
 fi
 
 echo "====================================================================="
-echo "  Starting SOAR in Instant Demo Mode (Zero Downloads, Zero Ollama)"
+echo "  Starting SAW in Instant Demo Mode (Zero Downloads, Zero Ollama)"
 echo "====================================================================="
 
 # 1. Check Python Venv

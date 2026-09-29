@@ -86,7 +86,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-[11px] font-mono tracking-widest text-[#657066] uppercase mb-6"
+          className="text-[11px] font-mono tracking-widest text-[#657066] uppercase mb-18"
         >
           SOVEREIGN LOCAL EXECUTION · ZERO EXTERNAL DATA EXPOSURE
         </motion.div>
@@ -99,7 +99,7 @@ export function Hero() {
       <Modal
         isOpen={demoOpen}
         onClose={() => setDemoOpen(false)}
-        title="SOAR — Sovereign AI Overview"
+        title="SAW — Sovereign AI Overview"
         description="Experience the end-to-end local execution pipeline."
         maxWidth="lg"
       >
@@ -110,7 +110,7 @@ export function Hero() {
               Local-First Sovereign AI in Action
             </h4>
             <p className="max-w-md text-[#9BA79D] mb-4">
-              Watch how SOAR reads scanned NDT reports, plans tool invocations, executes
+              Watch how SAW reads scanned NDT reports, plans tool invocations, executes
               Python code sandboxes, and delivers verified Word & PDF memos on your metal.
             </p>
             <Link

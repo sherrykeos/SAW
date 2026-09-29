@@ -75,7 +75,7 @@ export function RunInspectorShowcase() {
             Know what your AI is doing.
           </h2>
           <p className="text-[#9BA79D] text-sm sm:text-base leading-relaxed">
-            No black-box opacity. SOAR displays deterministic checkpoints, tool invocations, and execution status — with zero private internal prompt leakage.
+            No black-box opacity. SAW displays deterministic checkpoints, tool invocations, and execution status — with zero private internal prompt leakage.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional
 
 @dataclass
 class AppConfig:
-    name: str = "SOAR"
+    name: str = "SAW"
     environment: str = "development"
     debug: bool = False
 
@@ -35,14 +35,14 @@ class StorageConfig:
 
 @dataclass
 class DatabaseConfig:
-    path: str = "./data/soar.db"
+    path: str = "./data/saw.db"
 
 
 @dataclass
 class VectorStoreConfig:
     backend: str = "chroma"
     path: str = "./data/chroma"
-    collection_name: str = "soar_knowledge"
+    collection_name: str = "saw_knowledge"
 
 
 @dataclass
@@ -179,3 +179,6 @@ class SOARConfig:
             security=sec_cfg,
             api=api_cfg,
         )
+
+
+SAWConfig = SOARConfig

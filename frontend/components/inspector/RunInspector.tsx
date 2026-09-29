@@ -513,7 +513,7 @@ export function RunInspector({
                             </div>
                           ) : (
                             <div className="text-[#657066] italic text-[10px]">
-                              Validated by SOAR local runtime.
+                              Validated by SAW local runtime.
                             </div>
                           )}
                         </motion.div>

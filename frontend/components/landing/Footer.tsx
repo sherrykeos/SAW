@@ -101,7 +101,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#202A22] flex flex-col sm:flex-row items-center justify-between text-[#657066] text-xs font-mono gap-4">
-          <div>© 2026 SOAR AI Systems. Sovereign AI Workbench.</div>
+          <div>© 2026 SAW AI Systems. Sovereign AI Workbench.</div>
           <div className="flex items-center gap-6">
             <span className="hover:text-[#9BA79D] cursor-pointer">Privacy</span>
             <span className="hover:text-[#9BA79D] cursor-pointer">Terms</span>

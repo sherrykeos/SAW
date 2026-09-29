@@ -68,7 +68,7 @@ export default function ToolsRegistryPage() {
           Tool Registry
         </h1>
         <p className="text-xs text-[#9BA79D] mt-1">
-          Registered local tools invoked autonomously by SOAR during multi-step DAG execution.
+          Registered local tools invoked autonomously by SAW during multi-step DAG execution.
         </p>
       </div>
 

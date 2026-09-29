@@ -1,10 +1,10 @@
 # ==============================================================================
-# SOAR — Sovereign On-premise Agentic Reasoning
+# SAW — Sovereign Agentic AI Workbench
 # Demo / Quickstart Configuration (Zero GPU, Zero Downloads, Zero Ollama)
 # ==============================================================================
 
 app:
-  name: "SOAR"
+  name: "SAW"
   environment: "demo"
   debug: false
 
@@ -22,7 +22,7 @@ models:
     enabled: true
     timeout: 30
     options:
-      fixed_response: "SOAR Industrial Analysis: Verified equipment parameters against operating standards. All readings conform to safety specifications."
+      fixed_response: "SAW Industrial Analysis: Verified equipment parameters against operating standards. All readings conform to safety specifications."
 
   # 2. Hard Reasoning & Multi-Step Analysis Model
   - id: "mock-reasoning"

@@ -55,7 +55,7 @@ export function DataSection() {
               Traditional cloud AI requires sending sensitive industrial data, confidential reports, and proprietary drawings to external servers.
             </p>
             <p className="text-sm text-[#9BA79D] leading-relaxed">
-              SOAR runs on your own infrastructure with strict network policies, local weights, and sandboxed tool execution. Nothing leaves your perimeter.
+              SAW runs on your own infrastructure with strict network policies, local weights, and sandboxed tool execution. Nothing leaves your perimeter.
             </p>
 
             <div className="space-y-3 pt-2 font-mono text-xs">

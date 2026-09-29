@@ -1,6 +1,6 @@
 #!/bin/bash
 # =====================================================================
-#   SOAR - Sovereign On-premise Agentic Reasoning (REAL MODE)
+#   SAW - Sovereign Agentic AI Workbench (REAL MODE)
 #   Live Local Models: Qwen3, Qwen2.5-Coder, Qwen2.5-VL + BGE-M3 RAG
 # =====================================================================
 
@@ -12,7 +12,7 @@ if [ ! -d "backend" ] && [ -d "../backend" ]; then
 fi
 
 echo "====================================================================="
-echo "  Starting SOAR in Real Mode (Live Ollama Inference)"
+echo "  Starting SAW in Real Mode (Live Ollama Inference)"
 echo "====================================================================="
 
 # 1. Check Python Venv

@@ -8,7 +8,7 @@ export function FinalCTA() {
   const [copied, setCopied] = useState(false);
 
   const copyCommand = () => {
-    navigator.clipboard.writeText("curl -fsSL https://soar.sh/install | bash");
+    navigator.clipboard.writeText("curl -fsSL https://saw.sh/install | bash");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -59,7 +59,7 @@ export function FinalCTA() {
         {/* Shell install copy hint */}
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-[#0D120F] border border-[#202A22] text-xs font-mono text-[#9BA79D]">
           <span className="text-[#B8F23D] font-bold">$</span>
-          <span>curl -fsSL https://soar.sh/install | bash</span>
+          <span>curl -fsSL https://saw.sh/install | bash</span>
           <button
             onClick={copyCommand}
             className="text-[#657066] hover:text-[#F1F5ED] transition p-1"

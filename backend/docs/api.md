@@ -1,6 +1,6 @@
-# SOAR Backend REST API
+# SAW Backend REST API
 
-SOAR provides a clean, local-first REST API built with FastAPI to interact with the agent, file storage, progress event checkpoints, and configured models.
+SAW provides a clean, local-first REST API built with FastAPI to interact with the agent, file storage, progress event checkpoints, and configured models.
 
 ---
 
@@ -41,13 +41,13 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ## 3. Detailed Endpoint Documentation
 
 ### `GET /api/health`
-Checks whether the SOAR backend is alive.
+Checks whether the SAW backend is alive.
 
 #### Response:
 ```json
 {
   "status": "ok",
-  "app": "SOAR",
+  "app": "SAW",
   "version": "0.1.0"
 }
 ```

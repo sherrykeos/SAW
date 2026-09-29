@@ -76,17 +76,17 @@ interface WorkbenchContextType {
 
 const WorkbenchContext = createContext<WorkbenchContextType | undefined>(undefined);
 
-const LOCAL_STORAGE_SESSIONS_KEY = "soar_chat_sessions_v2";
-const LOCAL_STORAGE_TASKS_KEY = "soar_session_tasks_v1";
-const LOCAL_STORAGE_ACTIVE_SESSION_KEY = "soar_active_session_id_v1";
+const LOCAL_STORAGE_SESSIONS_KEY = "saw_chat_sessions_v2";
+const LOCAL_STORAGE_TASKS_KEY = "saw_session_tasks_v1";
+const LOCAL_STORAGE_ACTIVE_SESSION_KEY = "saw_active_session_id_v1";
 
 function subscribeStore(callback: () => void) {
   if (typeof window === "undefined") return () => {};
   window.addEventListener("storage", callback);
-  window.addEventListener("soar-store-change", callback);
+  window.addEventListener("saw-store-change", callback);
   return () => {
     window.removeEventListener("storage", callback);
-    window.removeEventListener("soar-store-change", callback);
+    window.removeEventListener("saw-store-change", callback);
   };
 }
 
@@ -250,7 +250,7 @@ export function WorkbenchProvider({ children }: { children: React.ReactNode }) {
       sessionsRef.current = updated;
       if (typeof window !== "undefined") {
         localStorage.setItem(LOCAL_STORAGE_SESSIONS_KEY, JSON.stringify(updated.slice(0, 100)));
-        window.dispatchEvent(new Event("soar-store-change"));
+        window.dispatchEvent(new Event("saw-store-change"));
       }
     } catch {
       // ignore
@@ -283,7 +283,7 @@ export function WorkbenchProvider({ children }: { children: React.ReactNode }) {
   const persistTasks = useCallback((tasks: ClientTaskRecord[]) => {
     try {
       localStorage.setItem(LOCAL_STORAGE_TASKS_KEY, JSON.stringify(tasks.slice(0, 50)));
-      window.dispatchEvent(new Event("soar-store-change"));
+      window.dispatchEvent(new Event("saw-store-change"));
     } catch {
       // ignore
     }

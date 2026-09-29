@@ -31,7 +31,7 @@ export function HeroProductPreview() {
             </div>
             <div className="h-4 w-px bg-[#202A22]" />
             <div className="flex items-center gap-2 text-xs font-mono text-[#9BA79D]">
-              <span className="text-[#B8F23D] font-bold">SOAR</span>
+              <span className="text-[#B8F23D] font-bold">SAW</span>
               <span className="text-[#657066]">/</span>
               <span className="text-[#F1F5ED] truncate max-w-[200px] sm:max-w-none">
                 Turbine_Rotor_Batch_04.session

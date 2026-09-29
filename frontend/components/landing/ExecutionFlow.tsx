@@ -45,7 +45,7 @@ export function ExecutionFlow() {
       num: "05",
       title: "Adapt",
       subtitle: "SELF-CORRECTING",
-      desc: "Monitors tool outputs and errors. If a step fails, SOAR modifies parameters and initiates automated recovery attempts.",
+      desc: "Monitors tool outputs and errors. If a step fails, SAW modifies parameters and initiates automated recovery attempts.",
       icon: RotateCcw,
     },
     {

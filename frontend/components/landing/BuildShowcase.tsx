@@ -13,7 +13,7 @@ export function BuildShowcase() {
             Build something.
           </h2>
           <p className="text-[#9BA79D] text-sm sm:text-base leading-relaxed">
-            Give SOAR real software tasks. From writing endpoints and data pipelines to running automated unit tests inside an isolated local sandbox.
+            Give SAW real software tasks. From writing endpoints and data pipelines to running automated unit tests inside an isolated local sandbox.
           </p>
         </div>
 

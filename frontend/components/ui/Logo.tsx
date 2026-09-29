@@ -25,13 +25,13 @@ export function Logo({
         >
           <path
             d="M18 2L32 32H24L18 18L12 32H4L18 2Z"
-            fill="url(#soarLimeGrad)"
+            fill="url(#sawLimeGrad)"
           />
           <path d="M18 10L25 26H11L18 10Z" fill="#070A08" />
           <circle cx="18" cy="18" fill="#B8F23D" r="2.5" />
           <defs>
             <linearGradient
-              id="soarLimeGrad"
+              id="sawLimeGrad"
               x1="4"
               y1="2"
               x2="32"
@@ -46,7 +46,7 @@ export function Logo({
       </div>
       <div className="flex flex-col">
         <span className="font-sans font-extrabold text-base tracking-[0.18em] text-[#F1F5ED] leading-none">
-          SOAR
+          SAW
         </span>
         {showSubtitle && (
           <span className="font-mono text-[9px] text-[#657066] uppercase tracking-wider mt-0.5 leading-none">

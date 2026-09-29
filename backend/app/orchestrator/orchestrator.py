@@ -129,7 +129,7 @@ class Orchestrator:
 
                 rag_context = "\n\n".join(context_chunks)
                 prompt = (
-                    f"You are SOAR, a sovereign on-premise AI assistant.\n"
+                    f"You are SAW, a sovereign agentic AI assistant.\n"
                     f"Answer the question accurately using ONLY the retrieved local context below.\n"
                     f"Include source citations (e.g. document name, page number) when applicable.\n\n"
                     f"RETRIEVED KNOWLEDGE CONTEXT:\n{rag_context}\n\n"
@@ -137,9 +137,9 @@ class Orchestrator:
                     f"ANSWER:"
                 )
             except Exception as e:
-                prompt = f"You are SOAR, a sovereign on-premise AI assistant.\n\nQuestion: {task}\n\nAnswer:"
+                prompt = f"You are SAW, a sovereign agentic AI assistant.\n\nQuestion: {task}\n\nAnswer:"
         else:
-            prompt = f"You are SOAR, a sovereign on-premise AI assistant.\n\nQuestion: {task}\n\nAnswer:"
+            prompt = f"You are SAW, a sovereign agentic AI assistant.\n\nQuestion: {task}\n\nAnswer:"
 
         exec_result: ModelExecutionResult = self.model_manager.generate_with_routing(
             prompt,
@@ -190,7 +190,7 @@ class Orchestrator:
         Optionally executes in python_sandbox if requested.
         """
         prompt = (
-            f"You are SOAR's specialized Python coding assistant.\n"
+            f"You are SAW's specialized Python coding assistant.\n"
             f"Provide clean, idiomatic, well-commented Python code for the following request.\n\n"
             f"TASK:\n{task}\n\n"
             f"PYTHON CODE:"

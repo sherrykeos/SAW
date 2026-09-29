@@ -234,7 +234,7 @@ export function CommandPalette() {
             {/* Footer */}
             <div className="px-4 py-2 bg-[#070A08] border-t border-[#202A22] text-[10px] text-[#657066] flex justify-between">
               <span>Navigate with ↑ ↓ · Select with Enter</span>
-              <span>SOAR Command Engine</span>
+              <span>SAW Command Engine</span>
             </div>
           </motion.div>
         </div>

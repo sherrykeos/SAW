@@ -791,7 +791,7 @@ export function ChatInterface() {
               value={prompt}
               onChange={handlePromptChange}
               onKeyDown={handleKeyDown}
-              placeholder="Message SOAR... (Enter to send, Shift+Enter for newline)"
+              placeholder="Message SAW... (Enter to send, Shift+Enter for newline)"
               rows={1}
               className="w-full bg-transparent border-0 resize-none text-sm text-[#F1F5ED] placeholder-[#657066] focus:outline-none leading-relaxed max-h-48 min-h-[44px]"
             />
@@ -959,7 +959,7 @@ export function ChatInterface() {
 
           {/* Subtitle Disclaimer */}
           <div className="text-center text-[10px] text-[#657066] font-mono">
-            SOAR runs locally · No external network traffic · Sovereign on-premise execution
+            SAW runs locally · No external network traffic · Sovereign on-premise execution
           </div>
         </div>
       </div>

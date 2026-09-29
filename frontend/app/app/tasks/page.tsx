@@ -44,7 +44,7 @@ export default function TasksHistoryPage() {
             Task History
           </h1>
           <p className="text-xs text-[#9BA79D] mt-1">
-            Browse and inspect autonomous tasks executed through the SOAR orchestrator.
+            Browse and inspect autonomous tasks executed through the SAW orchestrator.
           </p>
         </div>
 

@@ -15,7 +15,7 @@ export default function NotFound() {
         Endpoint or View Not Found
       </h1>
       <p className="text-xs text-[#9BA79D] max-w-sm mb-6 leading-relaxed">
-        The requested resource does not exist within the local SOAR workbench navigation graph.
+        The requested resource does not exist within the local SAW workbench navigation graph.
       </p>
       <Link
         href="/app"

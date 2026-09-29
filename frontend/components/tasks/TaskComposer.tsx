@@ -76,7 +76,7 @@ export function TaskComposer({ onTaskStarted, className }: TaskComposerProps) {
     if (!trimmed || isRunning) return;
 
     if (!isBackendOnline) {
-      error("Backend offline", "The local SOAR backend is unreachable. Please ensure it is running.");
+      error("Backend offline", "The local SAW backend is unreachable. Please ensure it is running.");
       return;
     }
 
@@ -91,7 +91,7 @@ export function TaskComposer({ onTaskStarted, className }: TaskComposerProps) {
     const modelOverride = selectedModel === "auto" ? null : selectedModel;
 
     try {
-      info("Task submitted", "Dispatching to SOAR local orchestrator...");
+      info("Task submitted", "Dispatching to SAW local orchestrator...");
 
       const response = await createTask({
         task: finalPrompt,
@@ -198,7 +198,7 @@ export function TaskComposer({ onTaskStarted, className }: TaskComposerProps) {
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Describe what you want SOAR to do... (e.g. 'Analyze inspection report and create an approval note')"
+        placeholder="Describe what you want SAW to do... (e.g. 'Analyze inspection report and create an approval note')"
         disabled={isRunning}
         className="w-full bg-transparent text-sm text-[#F1F5ED] placeholder:text-[#657066] focus:outline-none resize-none leading-relaxed font-sans"
       />

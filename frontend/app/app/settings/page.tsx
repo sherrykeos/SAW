@@ -104,7 +104,7 @@ export default function SettingsPage() {
             </div>
 
             <p className="text-xs text-[#9BA79D] font-sans leading-relaxed pt-2">
-              SOAR operates strictly within your local security envelope. Outbound cloud API requests are disallowed by default configuration.
+              SAW operates strictly within your local security envelope. Outbound cloud API requests are disallowed by default configuration.
             </p>
           </div>
         )}
@@ -127,7 +127,7 @@ export default function SettingsPage() {
               </div>
               <div className="p-3 rounded-lg bg-[#070A08] border border-[#202A22] flex justify-between items-center">
                 <span className="text-[#657066]">Metadata SQLite Database:</span>
-                <span className="text-[#F1F5ED]"><code>./data/soar.db</code></span>
+                <span className="text-[#F1F5ED]"><code>./data/saw.db</code></span>
               </div>
               <div className="p-3 rounded-lg bg-[#070A08] border border-[#202A22] flex justify-between items-center">
                 <span className="text-[#657066]">Maximum File Size:</span>

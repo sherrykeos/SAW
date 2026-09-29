@@ -1,10 +1,10 @@
 # ==============================================================================
-# SOAR — Sovereign On-premise Agentic Reasoning
+# SAW — Sovereign Agentic AI Workbench
 # Central Application Configuration
 # ==============================================================================
 
 app:
-  name: "SOAR"
+  name: "SAW"
   environment: "development"
   debug: false
 

@@ -9,6 +9,6 @@ def get_health() -> HealthResponse:
     """Returns application health and operational status."""
     return HealthResponse(
         status="ok",
-        app="SOAR",
+        app="SAW",
         version="0.1.0",
     )

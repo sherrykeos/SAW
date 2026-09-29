@@ -115,7 +115,7 @@ export function WorkTypesSection() {
                     href="/app"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#9BA79D] group-hover:text-[#D5FF78] transition-colors"
                   >
-                    <span>Give SOAR a job</span>
+                    <span>Give SAW a job</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
