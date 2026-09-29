@@ -57,11 +57,32 @@ class SearchKnowledgeTool(BaseTool):
         }
 
     def _get_embedding_model(self) -> BaseEmbeddingModel:
-        """Lazily instantiates the default local BGE-M3 embedding model if not injected."""
+        """Lazily instantiates the embedding model based on app config if not injected."""
         if self._embedding_model is None:
-            from app.embeddings.bge_m3 import BGEM3EmbeddingModel
+            try:
+                from app.config import get_config
 
-            self._embedding_model = BGEM3EmbeddingModel()
+                cfg = get_config()
+                emb_name = str(getattr(cfg.embeddings, "model_name_or_path", "")).lower()
+                if emb_name in ("mock", "mock-bge-m3", "none"):
+                    from app.embeddings.mock import MockEmbeddingModel
+
+                    dim = getattr(cfg.embeddings, "dimension", 1024)
+                    self._embedding_model = MockEmbeddingModel(dimension=dim)
+                else:
+                    from app.embeddings.bge_m3 import BGEM3EmbeddingModel
+
+                    self._embedding_model = BGEM3EmbeddingModel(
+                        model_name_or_path=cfg.embeddings.model_name_or_path,
+                        dimension=cfg.embeddings.dimension,
+                        device=cfg.embeddings.device,
+                        normalize_embeddings=cfg.embeddings.normalize_embeddings,
+                        batch_size=cfg.embeddings.batch_size,
+                    )
+            except Exception:
+                from app.embeddings.bge_m3 import BGEM3EmbeddingModel
+
+                self._embedding_model = BGEM3EmbeddingModel()
         return self._embedding_model
 
     def _get_vector_store(self) -> BaseVectorStore:

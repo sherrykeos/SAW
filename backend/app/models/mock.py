@@ -19,7 +19,7 @@ class MockModel(ModelAdapter):
         self._provider = provider
         self._capabilities = capabilities or {ModelCapability.GENERAL}
         self._priority = priority
-        self.fixed_response = fixed_response
+        self.fixed_response = fixed_response or "Mock response from SOAR local model."
         self.response_fn = response_fn
         self._available = available
 

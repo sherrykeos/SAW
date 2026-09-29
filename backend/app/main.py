@@ -3,6 +3,13 @@ SOAR Main Application Entry Point.
 Initializes the FastAPI application from app.api.create_app().
 """
 
+import os
+import sys
+
+# Support --demo CLI flag
+if "--demo" in sys.argv:
+    os.environ["SOAR_CONFIG_PATH"] = "config/config.demo.yaml"
+
 from app.api import create_app
 from app.config import get_config
 

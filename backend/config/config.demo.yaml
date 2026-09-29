@@ -1,0 +1,123 @@
+# ==============================================================================
+# SOAR — Sovereign On-premise Agentic Reasoning
+# Demo / Quickstart Configuration (Zero GPU, Zero Downloads, Zero Ollama)
+# ==============================================================================
+
+app:
+  name: "SOAR"
+  environment: "demo"
+  debug: false
+
+# ------------------------------------------------------------------------------
+# Mock Model Pool (100% Local Simulation)
+# ------------------------------------------------------------------------------
+models:
+  # 1. Primary General & Reasoning Model
+  - id: "mock-general"
+    provider: "mock"
+    capabilities:
+      - "general"
+      - "reasoning"
+    priority: 10
+    enabled: true
+    timeout: 30
+    options:
+      fixed_response: "SOAR Industrial Analysis: Verified equipment parameters against operating standards. All readings conform to safety specifications."
+
+  # 2. Hard Reasoning & Multi-Step Analysis Model
+  - id: "mock-reasoning"
+    provider: "mock"
+    capabilities:
+      - "reasoning"
+    priority: 15
+    enabled: true
+    timeout: 30
+    options:
+      fixed_response: "1. Diagnostic assessment initialized.\n2. Cross-referenced telemetry against standard safety thresholds.\n3. Operational integrity verified."
+
+  # 3. Dedicated Python Coding Model
+  - id: "mock-coder"
+    provider: "mock"
+    capabilities:
+      - "coding"
+    priority: 15
+    enabled: true
+    timeout: 30
+    options:
+      fixed_response: |
+        ```python
+        def calculate_boiler_efficiency(steam_enthalpy: float, feed_water_enthalpy: float, fuel_energy: float) -> float:
+            """Calculates thermal efficiency percentage of an industrial boiler."""
+            heat_added = steam_enthalpy - feed_water_enthalpy
+            return round((heat_added / fuel_energy) * 100, 2)
+
+        print("Calculated Boiler Efficiency:", calculate_boiler_efficiency(2700.0, 420.0, 3100.0), "%")
+        ```
+
+  # 4. Multimodal Vision Model
+  - id: "mock-vision"
+    provider: "mock"
+    capabilities:
+      - "vision"
+    priority: 15
+    enabled: true
+    timeout: 30
+    options:
+      fixed_response: "Visual inspection confirms clean weld seam with no surface porosity or cracking detected."
+
+ollama:
+  base_url: "http://localhost:11434"
+  timeout: 30.0
+
+storage:
+  root: "./data/files"
+  max_file_size_bytes: 52428800  # 50 MB
+  allow_empty: true
+
+database:
+  path: "./data/soar.db"
+
+vector_store:
+  backend: "chroma"
+  path: "./data/chroma"
+  collection_name: "soar_knowledge"
+
+# Use deterministic mock embeddings (no HuggingFace download needed)
+embeddings:
+  model_name_or_path: "mock"
+  dimension: 1024
+  device: null
+  normalize_embeddings: true
+  batch_size: 32
+
+vision:
+  model: "mock-vision"
+  base_url: "http://localhost:11434"
+  backend: "mock"
+  timeout: 30
+  temperature: 0.2
+
+rag:
+  top_k: 5
+  chunk_size: 500
+  chunk_overlap: 50
+
+agent:
+  max_iterations: 5
+  default_model_id: "mock-general"
+  hard_model_timeout: 15.0
+
+sandbox:
+  root: "./sandbox"
+  timeout: 10
+
+events:
+  enabled: true
+
+security:
+  allow_external_network: false
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  reload: false
